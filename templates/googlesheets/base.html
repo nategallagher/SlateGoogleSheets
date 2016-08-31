@@ -1,0 +1,38 @@
+{% load i18n static_extras menus %}
+{% block extra_head %}
+    {# static 'jquery.autocomplete' #}
+
+    {% css 'assignment/style.css' %}
+    {% css 'document/style.css' %}
+
+    {# {{ form.claim.media }} #}
+    {% js 'core/datepicker.js' %}
+    {% js 'common/menu.js' %}
+    {% js 'document/upload.js' %}
+    {% js 'common/confirmation.js' %}
+    {% js 'common/js/tabs.js' %}
+    {% js 'external/encoder.js' %}
+{% endblock %}
+
+{% block extra_document_ready %}
+    {{ block.super }}
+    $("#submenu").configure_menu({"offset": 3 });
+    $("#accordion").tabs();
+{% endblock %}
+
+{% block submenu %}
+    <div class="span-100">
+        <ul id="submenu">
+            {% for name, link in add_assigment_links.items %}
+                <li><a href="{{ link }}">{{ name }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
+
+{% block content %}
+<div id="accordion">
+    {% block form %}
+    {% endblock %}
+</div>
+{% endblock %}

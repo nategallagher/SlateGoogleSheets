@@ -1,0 +1,162 @@
+{# js 'core/datepicker.js' #}
+<script type="text/javascript" src="/static/core/datepicker.js"></script>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css"> 
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
+<script>
+$(document).ready(function() {
+    $('.datepicker').datepicker();
+});
+</script>
+
+<h1>Fulfillment Request For MTi2</h1>
+<h2>User: {{ user }}</h2>
+<br/>
+<form action="." method="post">
+
+    {% csrf_token %}
+	{{ form.non_field_errors }}
+	{{ form.name_of_field.errors }}
+    <div id="{{ form.type.auto_id }}" class="span-80">
+        {{ form.type }}
+        {{ form.type.errors }}
+    </div>	
+	<div>
+	    {{ form.ship_date.label_tag }}
+	    {{ form.ship_date }}
+	    {{ form.ship_date.errors }}
+	</div>
+	<div>
+	    {{ form.order_date.label_tag }}
+	    {{ form.order_date }}
+	    {{ form.order_date.errors }}
+	</div>
+	<div>
+	    {{ form.dealer_name.label_tag }}
+	    {{ form.dealer_name }}
+	    {{ form.dealer_name.errors }}
+	</div>
+	<div>
+	    {{ form.customer_name.label_tag }}
+	    {{ form.customer_name }}
+	    {{ form.customer_name.errors }}
+	</div>
+    <div>
+	    {{ form.street_address.label_tag }}
+	    {{ form.street_address }}
+	    {{ form.street_address.errors }}
+	</div>
+	<div>
+	    {{ form.city.label_tag }}
+	    {{ form.city }}
+	    {{ form.city.errors }}
+	</div>
+	<div>
+	    {{ form.state.label_tag }}
+	    {{ form.state }}
+	    {{ form.state.errors }}
+	</div>
+	<div>
+	    {{ form.zip.label_tag }}
+	    {{ form.zip }}
+	    {{ form.zip.errors }}
+	</div>
+	<div>
+	    {{ form.country.label_tag }}
+	    {{ form.country }}
+	    {{ form.country.errors }}
+	</div>
+	<div>
+	    {{ form.customer_phone.label_tag }}
+	    {{ form.customer_phone }}
+	    {{ form.customer_phone.errors }}
+	</div>
+	<div>
+	    {{ form.customer_email.label_tag }}
+	    {{ form.customer_email }}
+	    {{ form.customer_email.errors }}
+	</div>
+	<div>
+	    {{ form.sku_number.label_tag }}
+	    {{ form.sku_number }}
+	    {{ form.sku_number.errors }}
+	</div>
+	<div>
+	    {{ form.model_type.label_tag }}
+	    {{ form.model_type }}
+	    {{ form.model_type.errors }}
+	</div>
+	<div>
+	    {{ form.item_condition.label_tag }}
+	    {{ form.item_condition }}
+	    {{ form.item_condition.errors }}
+	</div>
+	<div>
+	    {{ form.unit_number.label_tag }}
+	    {{ form.unit_number }}
+	    {{ form.unit_number.errors }}
+	</div>
+	<div>
+	    {{ form.order_number.label_tag }}
+	    {{ form.order_number }}
+	    {{ form.order_number.errors }}
+	</div>
+	<div>
+	    {{ form.po_number.label_tag }}
+	    {{ form.po_number }}
+	    {{ form.po_number.errors }}
+	</div>
+	<div>
+	    {{ form.slate_invoice_number.label_tag }}
+	    {{ form.slate_invoice_number }}
+	    {{ form.slate_invoice_number.errors }}
+	</div>
+	<div>
+	    {{ form.priority.label_tag }}
+	    {{ form.priority }}
+	    {{ form.priority.errors }}
+	</div>
+	<div>
+	    {{ form.order_notes.label_tag }}
+	    {{ form.order_notes }}
+	    {{ form.order_notes.errors }}
+	</div>
+	<div>
+	    {{ form.promised_date.label_tag }}
+	    {{ form.promised_date }}
+	    {{ form.promised_date.errors }}
+	</div>
+	<div>
+        <span title="Requested shipment. Number is 4 digits, week/year. 0115 Would be first shipment of 2015.">
+		    {{ form.ship_number.label_tag }}
+		    {{ form.ship_number }}
+		    {{ form.ship_number.errors }}
+        </span>
+	</div>
+	<div>
+        <span title="If different than the shipping address.">
+		    {{ form.billing_address.label_tag }}
+		    {{ form.billing_address }}
+		    {{ form.billing_address.errors }}
+        </span>
+	</div>
+	<div>
+	    {{ form.addtl_ship_info.label_tag }}
+	    {{ form.addtl_ship_info }}
+	    {{ form.addtl_ship_info.errors }}
+	</div>
+	<div>
+	    {{ form.addtl_notes.label_tag }}
+	    {{ form.addtl_notes }}
+	    {{ form.addtl_notes.errors }}
+	</div>
+	<div>
+	    {{ form.warranty_date.label_tag }}
+	    {{ form.warranty_date }}
+	    {{ form.warranty_date.errors }}
+	</div>
+	<div>
+	    <input type="submit" value="Submit" />
+	</div>
+</form>

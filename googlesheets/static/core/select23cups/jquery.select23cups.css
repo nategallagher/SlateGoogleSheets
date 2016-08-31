@@ -1,0 +1,62 @@
+.select23cups {
+    line-height: 1;
+    clear: left;
+    width: 100%;
+    padding: 1px;
+    margin: 0 0 20px 0;
+    float: left;
+    background : url('') repeat-x;
+}
+.select23cups_wrapper, .select23cups_select3 {
+    float: left;
+    border: 2px solid #ccc;
+    padding: 5px;
+}
+.select23cups_select3 {
+    padding: 10px;
+}
+.select23cups_select1,
+.select23cups_select2 {
+    float: left;
+    padding: 5px;
+}
+
+.select23cups_select1 b,
+.select23cups_select2 b,
+.select23cups_select3 b {
+    display: block;
+}
+.select23cups_select1 select,
+.select23cups_select2 select,
+.select23cups_select3 select {
+    width: 230px;
+}
+.select23cups_buttons {
+    float: left;
+    list-style: none;
+    margin: 40px 0 0 0;
+    padding: 0 8px;
+    width: 40px;
+    text-align: center;
+    font-size: 12pt;
+	font-family: 'Arial', sans-serif;
+    font-weight: bold;
+}
+.select23cups_buttons a {
+    display: block;
+    margin: 2px 0;
+    padding: 5px 0;
+    cursor: hand;
+    border: 1px solid #999;
+    color: #666;
+	font-family: 'Arial', sans-serif;
+    font-weight: bold;
+}
+
+.select23cups_buttons_disable {
+    background-color: #eee;
+    border: 1px solid #aaa;
+    cursor: default;
+	font-family: 'Arial', sans-serif;
+    font-weight: bold;
+}

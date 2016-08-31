@@ -1,0 +1,36 @@
+#id_type ul {
+    list-style-type: none;
+    padding: 0 0 20px 0;
+}
+
+#id_type ul li {
+    float: left;
+    padding: 0 25px 0 0;
+}
+
+#id_other_info, #id_comment {
+    height: 70px;
+}
+
+.lh16 {
+    line-height: 16px;
+}
+
+fieldset h6, .accordion-content h6 {
+    border-top: 1px dashed #ccc;
+    padding: 20px 0;
+    font-size: 1.2em;
+    margin: 20px 0 0 0;
+    line-height: 1;
+}
+
+.clienttitle {
+	
+}
+.radio-list ul{
+	list-style: none inside;
+	padding-left: 0;
+}
+.radio-list ul li{
+    float: left;
+}

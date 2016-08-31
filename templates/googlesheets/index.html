@@ -1,0 +1,19 @@
+<div>
+	<h1>Last {{ latest_ship_list|length }} Shipments</h1>
+</div>
+<div>
+{% if latest_ship_list %}
+    <ul>
+    {% for shipment in latest_ship_list %}
+        <li><a href="/googlesheets/{{ shipment.id }}/">{{ shipment.address }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No shipments are available.</p>
+{% endif %}
+</div>
+<br/>
+<div>
+<a href="/googlesheets/entershipment/">Enter New Shipment</a>
+</div>
+
